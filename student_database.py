@@ -6,11 +6,7 @@ class Student(StudentDatabase):
         self.name = name
         self.department = department
         self.is_enrolled = is_enrolled
-        # if (found[0]==-1):
         self.add_student(self.student_id,self.name,self.department,self.is_enrolled)
-        # else:
-            # print(found[0],found[1])
-            # self.enroll_student(found[0]-1)
     @classmethod
     def add_student(self,*student):
         StudentDatabase.student_list.append(student)
@@ -30,7 +26,7 @@ class Student(StudentDatabase):
         if exist[0]==-1:
             print("Student Not Found")
             return
-        elif  StudentDatabase.student_list[idx] == True:
+        elif  StudentDatabase.student_list[idx][3] == True:
             print("Student Already Enrolled")
             return
         temp = list(StudentDatabase.student_list[idx])
