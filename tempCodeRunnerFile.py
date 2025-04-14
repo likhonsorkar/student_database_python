@@ -1,1 +1,2 @@
-StudentDatabase.student_list[idx][3] = True
+
+# Student.drop_student(1)
